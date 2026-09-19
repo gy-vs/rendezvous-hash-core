@@ -1,0 +1,36 @@
+{
+  "name": "weighted-rendezvous",
+  "version": "1.0.0",
+  "description": "Weighted Rendezvous hashing (HRW) with weighted scores, stable id tie-breaks and failure-domain-aware replica selection",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pretest": "tsc -p tsconfig.json",
+    "test": "node --test dist/test/"
+  },
+  "keywords": [
+    "rendezvous-hashing",
+    "hrw",
+    "weighted",
+    "consistent-hashing"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}
