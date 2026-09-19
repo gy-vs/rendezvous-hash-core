@@ -1,0 +1,40 @@
+{
+  "name": "rendezvous-hash-core",
+  "version": "1.0.0",
+  "description": "Weighted Rendezvous (HRW) hashing library: deterministic key-to-node assignment with weights, stable tie-breaking, and failure-domain-aware replicas.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --test --enable-source-maps dist-test/test/",
+    "clean": "rm -rf dist dist-test"
+  },
+  "keywords": [
+    "rendezvous-hashing",
+    "hrw",
+    "weighted-hashing",
+    "consistent-hashing",
+    "failure-domain",
+    "replicas"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
